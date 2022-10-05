@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<ui:composition template="templateJSF.xhtml">
+
+    <ui:define name="pageHeader">
+        <!--        #{msg['categoryFormJSF.pageTitle']}-->
+        <h:link value="categoryFormProJSF" outcome="categoryFormProJSF"/> |
+        <h:link value="categoryFormProListJSF" outcome="categoryFormProListJSF"/>
+    </ui:define>
+    <ui:define name="body">
+        <h:form>
+            <div>
+                <h:outputLabel value="Product Name"/>
+                <h:inputText id="productName" value="#{catalogItemFormBeanPro.item.name}">
+                    <f:validateRegex pattern="[A-Za-z0-9 ]+"/>
+                </h:inputText>
+                <h:message for="productName"/>
+            </div>
+            <div>
+                <h:outputLabel value="Description"/>
+                <h:inputTextarea value="#{catalogItemFormBeanPro.item.description}"/>
+            </div>
+            <h:commandButton value="Submit" action="#{catalogItemFormBeanPro.addItem()}"/>
+        </h:form>
+    </ui:define>
+
+</ui:composition>
+</html>

@@ -9,7 +9,7 @@ public class Catalog {
     public static Map<String, CatalogItem> catalogItemMap = new HashMap<>();
 
     public static void addItem(CatalogItem item){
-        catalogItemMap.put(item.getId(), item);
+        catalogItemMap.put(item.getId().toString(), item);
     }
 
     public static CatalogItem getItem(String id){

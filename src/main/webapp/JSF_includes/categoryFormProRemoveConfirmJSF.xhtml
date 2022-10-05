@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<ui:composition template="templateJSF.xhtml">
+
+    <f:metadata>
+        <f:viewParam name="itemId" value="#{catalogItemDeleteBeanPro.itemId}"/>
+        <f:event type="preRenderView" listener="#{catalogItemDeleteBeanPro.fetchItem()}"/>
+    </f:metadata>
+
+    <ui:define name="pageHeader">
+    </ui:define>
+    <ui:define name="body">
+        <h:form>
+            <h3>please confirm that you like to remove the following item</h3>
+            <div>
+                <h:outputLabel value="Product Id"/>
+                <h:outputLabel id="productId" value="#{catalogItemDeleteBeanPro.item.id}"/>
+            </div>
+            <div>
+                <h:outputLabel value="Product Name"/>
+                <h:outputLabel id="productName" value="#{catalogItemDeleteBeanPro.item.name}"/>
+            </div>
+            <div>
+                <h:outputLabel value="Product Description"/>
+                <h:outputLabel id="productDescription" value="#{catalogItemDeleteBeanPro.item.description}"/>
+            </div>
+            <h:commandButton value="Submit" action="#{catalogItemDeleteBeanPro.removeItem()}"/>
+            <h:commandButton value="cancel" action="categoryFormProListJSF"/>
+        </h:form>
+    </ui:define>
+
+</ui:composition>
+
+</html>

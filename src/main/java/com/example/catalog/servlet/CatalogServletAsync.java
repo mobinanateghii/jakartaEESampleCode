@@ -41,7 +41,7 @@ public class CatalogServletAsync extends HttpServlet {
     protected void getResponse(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String catalogName = request.getParameter("name");
         String catalogDescription = request.getParameter("description");
-        String catalogId = request.getParameter("id");
+        Long catalogId = Long.valueOf(request.getParameter("id"));
 
         Catalog.addItem(new CatalogItem(catalogName, catalogDescription, catalogId));
 

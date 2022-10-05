@@ -23,7 +23,7 @@ public class CatalogJSTLServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String catalogName = request.getParameter("name");
         String catalogDescription = request.getParameter("description");
-        String catalogId = request.getParameter("id");
+        Long catalogId = Long.valueOf(request.getParameter("id"));
 
         Catalog.addItem(new CatalogItem(catalogName, catalogDescription, catalogId));
 

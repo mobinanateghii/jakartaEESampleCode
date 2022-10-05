@@ -57,7 +57,13 @@
         </p></td>
     </tr>
     <tr>
-        <td><a href="categoryFormJSF.xhtml">categoryFormJSF.html</a></td>
+        <td><a href="JSF_includes/categoryFormJSF.xhtml">categoryFormJSF.html</a></td>
+        <td><p>
+            like jst and JSP! we have both them here.its Based on MVC pattern.this Facelets integrated whit server side backing beans and it has Large community of JSF components
+        </p></td>
+    </tr>
+    <tr>
+        <td><a href="JSF_includes/categoryFormProJSF.xhtml">categoryFormProJSF.html</a></td>
         <td><p>
             like jst and JSP! we have both them here.its Based on MVC pattern.this Facelets integrated whit server side backing beans and it has Large community of JSF components
         </p></td>
